@@ -774,4 +774,9 @@ color: white;
   }
   
   
-  
+  @media only screen and (max-width: 900px){
+    .form_body_row {
+        flex-direction: column;
+        gap: 1px;
+    }
+  }
