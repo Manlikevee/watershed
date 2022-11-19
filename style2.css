@@ -1,0 +1,125 @@
+
+        .popup {
+        background-color: #fff;
+        width: 400px;
+        padding: 30px 40px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 4px;
+        display: block;
+    }
+    .popup #close ,#close2  {
+        display: block;
+        margin-top: -5px;
+        float: right;
+        background-color: transparent;
+        font-size: 35px;
+        color: #c5c5c5;
+        outline: none;
+        cursor: pointer;
+    }
+    .popup p {
+        font-size: 14px;
+        text-align: justify;
+        margin: 20px 0;
+    }
+    .loading-over {
+display: none;
+background-color: rgba(0, 0, 0, 0.7);
+
+position: fixed;
+backdrop-filter: blur(2px);
+bottom: 0;
+left: 0;
+right: 0;
+top: 0;
+z-index: 9999999999999999999998;
+align-items: center;
+justify-content: center;
+}
+
+.loading-over2 {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+    position: fixed;
+    backdrop-filter: blur(2px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9999999999999999999998;
+    align-items: center;
+    justify-content: center;
+    }
+
+
+.secoact{
+    width: 100%;
+display: flex;
+flex-direction: column;
+grid-gap: 10px;
+justify-content: center;
+align-items: center;
+}
+.logobod{
+text-align: center;
+font-size: 16px;
+font-weight: 300;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: center;
+color: rgba(0, 0, 0, 1);
+
+
+}
+
+.logomen{
+
+font-size: 20px;
+font-weight: 600;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: justified;
+color: rgba(0, 0, 0, 1);
+
+}
+.logobtn{
+margin-top: 5px;
+margin-bottom: 10px;
+}
+.arwbtn {
+width: 100%;
+background: #007146;
+color: white;
+padding: 10px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.arwbtn:hover {
+background-color: rgb(245, 245, 245);
+border: 1px solid #007146;
+color: #000;
+}
+@media screen and (max-width: 600px) {
+.popup {
+    width: 90%;
+    margin: auto;
+  }
+  .introjs-tooltip{
+    opacity: 1;
+display: block;
+left: 50%;
+top: 0% !important;
+margin-left: -160px;
+margin-top: 64.5px;
+  }
+
+
+}
+    
