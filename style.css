@@ -693,6 +693,7 @@ padding: 0 2px !important;
     width: fit-content;
     
   }
+  
 
   .stepper .title{
     font-family: Poppins;
@@ -705,6 +706,11 @@ color:
 #fff;
       
   }
+
+  .ends .title{
+    text-align: right;
+  }
+  
   .numb{
     margin: inherit;
     font-family: Poppins;
