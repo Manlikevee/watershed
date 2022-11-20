@@ -1,0 +1,426 @@
+.fixed_deposit{
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 20px;
+    color: rgba(115, 115, 115, 1);
+    }
+    
+    .fixed_deposit_text{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgb(71, 71, 71);
+    margin-bottom: 40px;
+    
+    }
+    
+    .fix_deposit_grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        grid-gap: 20px;
+    }
+    
+    .fixed_grid_content{
+        background: #fff;
+        padding: 16px;
+        border-radius: 8px;
+    }
+    
+    .account_number_grid{
+        display: flex;
+        gap: 10px;
+    }
+    
+    .account_name{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: 
+    rgba(115, 115, 115, 1);
+    }
+    
+    .account_digit{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #007146;
+    }
+    
+    .br_bottom{
+        width: 99%;
+        margin: auto;
+        margin-top: 10px;
+        border-bottom: 1px solid rgba(165, 171, 173, 1);
+    }
+    
+    .col3umnflex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-gap: 10px;
+    }
+    
+    input[type='range'],
+    input[type='range']::-webkit-slider-runnable-track,
+    input[type='range']::-webkit-slider-thumb {
+      -webkit-appearance: none;
+    }
+    /* 2.1 THUMB */
+    
+    input[type=range]::-webkit-slider-thumb {
+      background-color: #fff;
+      width: 20px;
+      height: 20px;
+      border: 3px solid #333;
+      border-radius: 50%;
+      margin-top: -9px;
+    }
+    
+    input[type=range]::-moz-range-thumb {
+      background-color: #555;
+      width: 15px;
+      height: 15px;
+      border: 3px solid #333;
+      border-radius: 50%;
+    }
+    
+    input[type=range]::-ms-thumb {
+      background-color: #555;
+      width: 20px;
+      height: 20px;
+      border: 3px solid #333;
+      border-radius: 50%;
+    }
+    /* 2.2 TRACK */
+    
+    input[type=range]::-webkit-slider-runnable-track {
+      background-color: #007146;
+      height: 5px;
+    }
+    
+    input[type=range]:focus::-webkit-slider-runnable-track {
+      outline: none;
+    }
+    
+    input[type=range]::-moz-range-track {
+        background-color: #007146;
+        height: 5px;
+    }
+    
+    input[type=range]::-ms-track {
+        background-color: #007146;
+        height: 5px;
+    }
+    
+    input[type=range]::-ms-fill-lower {
+        background-color: #007146;
+    }
+    
+    input[type=range]::-ms-fill-upper {
+      background-color: black;
+    }
+    
+    
+    
+    .col3title{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(115, 115, 115, 1);
+    margin-top: 5px;
+    }
+    .col3body{
+        margin-top: 5px;
+        color: #007146;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: left;
+    
+    
+    }
+    
+    .range_meter{
+        width: 100%;
+    }
+    
+    .range_meter input{
+        width: 100%;
+        
+    }
+    
+    .rangeflex_top{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+    
+    .daylefttxt{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: 
+    rgba(115, 115, 115, 1);
+    }
+    
+    .dayleftnum{
+    color: #007146;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+    }
+    
+    
+    .transaction_flex_column_btn1 button{
+        float: right;
+        margin-top: 30px;
+        position: relative;
+        background-color: #007146;
+        border: 1px solid #fff;
+        font-size: 15px;
+        color: #FFFFFF;
+        border-radius: 9px;
+        padding: 15px;
+        width: 150px;
+        text-align: center;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        text-decoration: none;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      
+      .transaction_flex_column_btn1 button:hover{
+        position: relative;
+        background-color: rgb(245, 245, 245);
+        border: 1px solid #007146;
+        color: #000;
+      
+      }
+      
+      .buttondeposit{
+          width: 100%;
+      }
+    
+
+      body{
+        scroll-behavior: smooth;
+    }
+    
+    .success_container{
+        background-color: #fff;
+        padding: 50px;
+        width: 30%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;   
+    }
+    
+    .addnew_investment {
+        width: 60%;
+        background-color: #fff;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    
+    .success_svg{
+        width:100%;
+        height: 90px;
+        justify-content: center;
+        display: flex;
+    }
+    
+    .success_text{
+        margin-top: 20px;
+        text-align: center;
+        width: 100%;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 26px;
+        letter-spacing: 0em;
+        color: 
+        rgba(0, 0, 0, 1);
+        
+    }
+    
+    .success_text_2{
+        width: 100%;
+        margin-top: 20px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+    }
+    
+    
+    .takeaction_cont{
+        background-color: #fff;
+        padding: 10px;
+        width: 100%;
+        margin: auto; 
+        
+     
+    }
+    
+    .takeactiongrid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: 1fr;
+        grid-gap: 20px;
+    
+    }
+    .actgridbox{
+        border-radius: 9px;
+        text-align: center;
+        width: 100%;
+        background: rgba(235, 127, 53, 0.2);
+        padding: 20px;
+    
+    
+    }
+    
+    .text_box{
+        margin-top: 10px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 13px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: 
+    rgba(34, 34, 34, 1);
+    margin-bottom: 10px;
+    }
+    
+    
+    .transaction_flex_column_btn1 button{
+        margin-top: 20px;
+        position: relative;
+        background-color: #007146;
+        border: 1px solid #fff;
+        font-size: 13px;
+        color: #FFFFFF;
+        border-radius: 9px;
+        padding: 10px;
+        width: 110px;
+        text-align: center;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        text-decoration: none;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      
+      .transaction_flex_column_btn1 button:hover{
+        position: relative;
+        background-color: rgb(245, 245, 245);
+        border: 1px solid #007146;
+        color: #000;
+      
+      }
+    
+      .formmod{
+        height: fit-content;
+      }
+    
+      .addinvestmentcontainer {
+        width: 100%;
+        height: 50vh;
+    }
+    
+      @media only screen and (max-width: 890px) {
+        .success_container {
+            background-color: #fff;
+            padding: 50px;
+            width: 79%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    
+        .addnew_investment {
+            width: 90%;
+            background-color: #fff;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 5px;
+        }
+    
+        .addinvestmentcontainer {
+            width: 100%;
+            height: 80vh;
+            overflow-y: scroll;
+        }
+        .takeaction_cont {
+            background-color: #fff;
+            padding: 10px;
+            width: 90%;
+            margin: auto;
+        }
+      }
+      
+      #overlay{
+        display: none;
+        width: 100%;
+      height: 100%;
+      position:   fixed; 
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(2px);
+        background-blend-mode: darken;
+        background-size: cover;
+        min-height: 100vh;
+        z-index: 99999999922222222;
+    }
+    
+    
+
+      @media only screen and (max-width: 590px) {
+    
+        .fix_deposit_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+            grid-gap: 20px;
+        }
+        
+        }

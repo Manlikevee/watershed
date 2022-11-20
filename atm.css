@@ -1,0 +1,283 @@
+.card-group {
+    width: 100%;
+    
+    }
+    
+    .cardd {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.297),rgba(0, 0, 0, 0.2)) , url(https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/22.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      height: 250px;
+      width: 430px;
+      margin: auto;
+      border-radius: 12px;
+      /* background: rgba(255, 255, 255, 0.2); */
+      -webkit-transition: .5s all;   
+      -webkit-transition-delay: 5s; 
+      -moz-transition: .5s all;   
+      -moz-transition-delay: 5s; 
+      -ms-transition: .5s all;   
+      -ms-transition-delay: 5s; 
+      -o-transition: .5s all;   
+      -o-transition-delay: 5s; 
+      transition: .5s all;   
+      transition-delay:  .5s all;
+    
+    
+      box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .cardd:hover{
+        opacity: 0.9;
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -ms-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+    
+    .logoz img,
+    .chip img,
+    .number,
+    .name,
+    .from,
+    .to,
+    .ring {
+      position: absolute; /* All items inside card should have absolute position */
+    }
+    
+    .logoz img {
+      top: 35px;
+      right: 40px;
+      width: 80px;
+      height: auto;
+      opacity: 0.8;
+    }
+    
+    .chip img {
+      top: 90px;
+      left: 40px;
+      width: 50px;
+      height: auto;
+      opacity: 0.8;
+    }
+    
+    .number,
+    .name,
+    .from,
+    .to {
+      color: white;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    }
+    
+    
+    .number {
+     display: flex;
+     grid-gap: 20px;
+     justify-content: center;
+     align-items: center;
+      bottom: 65px;
+    
+      text-align: center;
+      width: 100%;
+    }
+    
+    .name {
+      font-size: 0.7rem;
+      left: 40px;
+      bottom: 35px;
+    }
+    
+    .from {
+      font-size: 0.7rem;
+      bottom: 35px;
+      right: 110px;
+    }
+    
+    .to {
+      font-size: 0.7rem;
+      bottom: 35px;
+      right: 40px;
+    }
+    
+    /* The two rings on the card background */
+    .ring {
+      height: 500px;
+      width: 500px;
+      border-radius: 50%;
+      background: transparent;
+      border: 50px solid rgba(255, 255, 255, 0.1);
+      bottom: -250px;
+      right: -250px;
+      box-sizing: border-box;
+    }
+    
+    .ring::after {
+      content: "";
+      position: absolute;
+      height: 600px;
+      width: 600px;
+      border-radius: 50%;
+      background: transparent;
+      border: 30px solid rgba(255, 255, 255, 0.1);
+      bottom: -80px;
+      right: -110px;
+      box-sizing: border-box;
+    }
+    
+    
+    @media screen and (max-width:600px) {
+    
+      .card-group{
+        width: 100%;
+      }
+
+      .chip img {
+        top: 70px;
+        left: 30px;
+        width: 30px;
+        height: auto;
+        opacity: 0.8;
+      }
+      
+      .logoz img {
+        top: 32px;
+        right: 40px;
+        width: 60px;
+        height: auto;
+        opacity: 0.8;
+      }
+
+      .cardd {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.497),rgba(0, 0, 0, 0.5)) , url(https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/22.jpeg);
+        background-repeat: no-repeat;
+        background-size: unset;
+        background-position: center;
+        position: relative;
+        height: 200px;
+        width: 100%;
+        margin: auto;
+        border-radius: 20px;
+        /* background: rgba(255, 255, 255, 0.2); */
+        -webkit-backdrop-filter: blur(30px);
+                backdrop-filter: blur(30px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: none;
+        overflow: hidden;
+      }
+      
+    }
+
+    table {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      table-layout: fixed;
+    }
+    
+    table caption {
+      font-size: 1.5em;
+      margin: .5em 0 .75em;
+    }
+    
+    table tr {
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      padding: .35em;
+    }
+    
+    table th,
+    table td {
+      padding: .725em;
+      text-align: center;
+    }
+    
+    table th {
+      font-size: .85em;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    
+    @media screen and (max-width: 600px) {
+      table {
+        border: 0;
+      }
+    
+      table caption {
+        font-size: 1.3em;
+      }
+      
+      table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+      
+      table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+      }
+      
+      table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+      }
+      
+      table td::before {
+        /*
+        * aria-label has no advantage, it won't be read inside a table
+        content: attr(aria-label);
+        */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      
+      table td:last-child {
+        border-bottom: 0;
+      }
+    }
+    
+    .form_body_columm b{
+        font-family: Poppins;
+        text-transform: capitalize;
+font-size: 18px;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: -0.025em;
+text-align: left;
+color: 
+#007146;
+    }
+    
+    
+    table td {
+        line-break: anywhere;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
