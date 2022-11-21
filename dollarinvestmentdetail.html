@@ -1,3 +1,6 @@
+{%load static%}
+{% load humanize %}
+{% load mathfilters %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,22 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="investment.css">
 </head>
 <body>
-    
-    <style>
-        .iti.iti--allow-dropdown.iti--separate-dial-code {
-    margin-top: 6px;
-}
-@media only screen and (max-width: 900px){
-    .logincontainer {
-    height: 100%;
-    min-height: 100%;
-    margin-top: 80px;
-}
-  }
 
-     </style>
+    
+
+
+
+
     <header class="header">
         <div class="container">
             <div class="row align-items-center justify-content-between">
@@ -76,73 +73,184 @@ height: 65px;
      </header>
 
 
+ 
+
+
+
     <div class="container">
         <br>
-    <div class="main-content">
-        <div class="logincontainer">
+        <br>
 
+     
 
-           <div class="creativeform2">
-            <div class="create_investment_form">
-            
-                <div class="investment_form_title">
-                    <h3>Log In</h3>
-                    <p class="innerdog">
-                        Input the correct details below to login to your account.                </div>
-    <form action="" method="POST">
-        {% csrf_token %}
-                <div class="form_body">
-    
-                    <div class="form_body_row">
-                        <div class="form_body_column"> 
-                            <label for="email">Username</label>
-                            <input type="text" placeholder="Username" class="input" name="username" required>   
+        <div class="main-content mbsma container vxvxvx">
+
+            <div class="displacedcontainer">
+                <div class="steppercontainer">
+                    <div class="stepper">
+                        <div class="numb">
+        1
                         </div>
-    
-                    </div>
-    
-                    <div class="form_body_row">
-                        <div class="form_body_column"> 
-                            <label for="password">Password</label>
-                            <input type="password" placeholder="Password" class="password" name="password" required>   
-                        </div>
-    
-                    </div>
-    
-                    <div class="fpas">
-                        <!-- {% url 'home' %} -->
-                      <a href="{% url 'password_reset'%}">Forgot Password ?</a>  
-    
-                    </div>
-    
-    
-    
-    
-                    <div class="form_body_row">
-       
-                        <div class="form_button_row" style="
-                        width: 100%;
-                    ">
-                            <input type="submit" value="Create Account">
+                        <div class="title">
+                            Personal Information
                         </div>
                     </div>
-    
-                    <div class="passworddog">
-                        
-                        
-                        Don't have an account? <span><a href="signup.html">Create Account</a> </span> 
+        
+ 
+        
+                    <div class="stepper ends">
+                        <div class="numb">
+        2
+                        </div>
+                        <div class="title">
+                            Investment Information
+                        </div>
                     </div>
-    
-    
-    
-    
                 </div>
-    </form>
+
+  <br>
+  
+                
+        
+              
+        
+                <div class="investment_product_type">
+                    <div class="investment_product_type_text">Product Type: <span class="investment_product_span"> {{j.plan.inestment_name}} </span> </div>
+                </div>
+        
+                <div class="investment_text">
+                    {{j.plan.investment_description}}
+                </div>
+        
+                <div class="tansaction_details">
+                    <div class="transaction_container">
+                        <div class="transaction_header">
+                            Transaction Details
+                        </div>
+                        <div class="transaction_flex">
+                            <div class="transaction_flex_column">Principal</div>
+                            <div class="transaction_flex_column_content">&#36; {{j.principal|intcomma}} </div>
+                        </div>
+                        <div class="transaction_flex">
+                            <div class="transaction_flex_column">Tenor</div>
+                            <div class="transaction_flex_column_content">{{j.tenor|floatformat}} days</div>
+                        </div>
+                        <div class="transaction_flex">
+                            <div class="transaction_flex_column">Interest  ({{j.interest_rate|floatformat}}%)</div>
+                            <div class="transaction_flex_column_content">&#36; {{j.interest_amount|intcomma}} </div>
+                        </div>
+                        <div class="transaction_flex">
+                            <div class="transaction_flex_column">Maturity Amount</div>
+                            <div class="transaction_flex_column_content">&#36; {{j.total_amount_payable|intcomma}} </div>
+                        </div>
+        
+                        <div id="popup1" class="overlayz">
+            <div class="poppup">
+                <h3>Payment Method</h3>
+                <a class="close" id="close-modal">&times;</a>
+                <div class="btncontent">
+                    <div class="transaction_flex_btn">
+        
+                          <a href="{% url 'Paywithnewdollarcard' j.reference %}">  <div class="transaction_flex_column_btn2"><button style="width:100%;">New Card</button></div> </a>
+                            <a href="{% url 'dollartoken' j.id %}">    <div class="transaction_flex_column_btn1"><button style="width:100%;">Card ending with <b> ******{{request.user.paymentdetails.authorization_data.data.authorization.last4}} </b>   </button></div> </a>
+        
+                        </div>
+                </div>
             </div>
-           </div>
         </div>
+        
+                        <div class="transaction_flex_btn">
+                          <a id="open-modal">  <div class="transaction_flex_column_btn1"><button>I agree</button></div> </a>
+                            <a href="{% url 'individualinvestmentdecline' j.reference %}">    <div class="transaction_flex_column_btn2"><button>I don’t agree</button></div> </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        
+        </div>
+        </div>
+     
     </div>
-    </div>
+
+ 
+    
+
+
+
+
+
+ 
+
+
+
+
+
+<style>
+
+    .overlayz {
+    display: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+        z-index: 9999999999999999999999999999;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .poppup {
+      margin: 70px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 5px;
+      width: fit-content;
+      position: relative;
+      transition: all 5s ease-in-out;
+      z-index: 9999999999999999999999999999;
+    }
+    
+    .poppup h3 {
+      margin-top: 0;
+    }
+    
+    .poppup{
+      animation: scale 0.5s ease;
+    }
+    
+    .poppup .close{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 20px;
+        right: 20px;
+        opacity: 0.8;
+        transition: all 200ms;
+        font-size: 28px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #666;
+        cursor: pointer;
+    }
+    
+    .poppup .close:hover {
+      color: #06D85F;
+    }
+    .poppup .btncontent {
+      max-height: 30%;
+      overflow: auto;
+    }
+    
+    @media screen and (max-width: 700px){
+    
+      .poppup{
+        width: 70%;
+      }
+    }
+        </style>
 
 
      <script>
@@ -164,6 +272,31 @@ height: 65px;
     } 
            
      </script>
-     <script src="nav.js"></script>
+
+
+<script src="nav.js"></script>
+
+<script>
+    const modal = document.querySelector(".overlayz");
+const openModalBtn = document.querySelector("#open-modal");
+const closeModalBtn = document.querySelector("#close-modal");
+
+openModalBtn.addEventListener("click", function () {
+modal.style.display = "flex";
+});
+
+closeModalBtn.addEventListener("click", function () {
+modal.style.display = "none";
+});
+</script>
+
+
+
 </body>
 </html>
+
+
+
+
+
+

@@ -8,20 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <style>
-        .iti.iti--allow-dropdown.iti--separate-dial-code {
-    margin-top: 6px;
-}
-@media only screen and (max-width: 900px){
-    .logincontainer {
-    height: 100%;
-    min-height: 100%;
-    margin-top: 80px;
-}
-  }
-
-     </style>
     <header class="header">
         <div class="container">
             <div class="row align-items-center justify-content-between">
@@ -48,11 +34,11 @@ height: 65px;
                 </button>
                 <nav class="nav">
                    <ul>
-                      <li><a href="#" class="active">Dashboard</a></li>
                       <li></li>
-                      <li><a href="profile.html">Account Statement</a></li>
                       <li></li>
-                      <li><a href="#">Self Service</a></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
                       <li> <a href=""> 
                         <div class="endnav m2wo">
                             <div class="headprofile_name">Oluwatosin Ajayi</div>  <div class="headprofile_img">
@@ -74,80 +60,144 @@ height: 65px;
             </div>
         </div>
      </header>
+<style>
+    body{
+        background-color: white !important; 
+    }
+   .landingpagedata{
+    height: 100vh;
+    display: flex;
+    grid-gap: 20px;
+    width: 100%;
+    background-color: white;
 
+   } 
+   .landingpagedata .imsid, .landingpagedata .txt {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+   }
 
-    <div class="container">
-        <br>
-    <div class="main-content">
-        <div class="logincontainer">
+   .landingpagedata div img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+   }
+.txt{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+}
+   .thead{
+    color: #000;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 70px;
+   }
+   .goldtouch{
+    font-size: 15px;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: goldenrod;
+    width: fit-content;
+    color: white;
+    font-weight: 700;
+   }
 
+   .gbtn{
+    background-color: #007146;
+    width: fit-content;
+    color: white;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 15px;
+    border-radius: 5px;
+   }
 
-           <div class="creativeform2">
-            <div class="create_investment_form">
-            
-                <div class="investment_form_title">
-                    <h3>Log In</h3>
-                    <p class="innerdog">
-                        Input the correct details below to login to your account.                </div>
-    <form action="" method="POST">
-        {% csrf_token %}
-                <div class="form_body">
+   @media screen and (max-width:1300px) {
+    .landingpagedata{
+    height: 100vh;
+    display: flex;
+    grid-gap: 20px;
+    width: 100%;
+    background-color: white;
+    padding: 50px;
+
+   } 
     
-                    <div class="form_body_row">
-                        <div class="form_body_column"> 
-                            <label for="email">Username</label>
-                            <input type="text" placeholder="Username" class="input" name="username" required>   
-                        </div>
+   }
+
+   @media screen and (max-width:1000px) {
+    .landingpagedata{
+    height: fit-content;
+    display: flex;
+    flex-direction: column-reverse;
+    grid-gap: 20px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+
+   } 
+   .landingpagedata .imsid {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+   }
+   .bottonflex{
+    display: flex;
+justify-content: center;
+align-items: center;
+    grid-gap: 20px;
+    width: 100%;
+   }
+   .thead{
+    line-height: normal;
+    font-weight: 600;
+    font-size: 30px;
+
+   }
     
-                    </div>
-    
-                    <div class="form_body_row">
-                        <div class="form_body_column"> 
-                            <label for="password">Password</label>
-                            <input type="password" placeholder="Password" class="password" name="password" required>   
-                        </div>
-    
-                    </div>
-    
-                    <div class="fpas">
-                        <!-- {% url 'home' %} -->
-                      <a href="{% url 'password_reset'%}">Forgot Password ?</a>  
-    
-                    </div>
-    
-    
-    
-    
-                    <div class="form_body_row">
-       
-                        <div class="form_button_row" style="
-                        width: 100%;
-                    ">
-                            <input type="submit" value="Create Account">
-                        </div>
-                    </div>
-    
-                    <div class="passworddog">
-                        
-                        
-                        Don't have an account? <span><a href="signup.html">Create Account</a> </span> 
-                    </div>
-    
-    
-    
-    
-                </div>
-    </form>
-            </div>
-           </div>
-        </div>
+   }
+
+</style>
+<div class="container">
+    <div class="landingpagedata">
+     
+<div class="txt">
+    <!-- <div class="goldtouch">
+        Progress & Success
+    </div> -->
+    <div class="thead">
+      <h2> 
+        The Future Of Investment
+     </h2>  
     </div>
+
+    New technologies are also on the rise, shaping the investment environment for start-ups and established players.
+    <br>
+    <br>
+    
+    <div class="bottonflex">
+        <a href="" class="gbtn">Get Started</a>
+        
     </div>
 
+</div>
 
-     <script>
+  
+<div class="imsid">
 
-            
+    <img src="6308.jpg" alt="">
+</div>
+    </div>
+</div>
+ 
+
+
+     <script>        
     const navToggler = document.querySelector(".nav-toggler");
     navToggler.addEventListener("click", navToggle);
    

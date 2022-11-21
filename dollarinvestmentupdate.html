@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css'>
 </head>
 <body>
     
@@ -22,6 +24,19 @@
   }
 
      </style>
+             <style>
+                .my-classerror {
+            border: 2px solid red !important;
+            outline: none !important;
+        }
+        
+        #datecount{
+            line-height: normal;
+            letter-spacing: 0px;
+            color: 
+#007045;
+        }
+                </style>
     <header class="header">
         <div class="container">
             <div class="row align-items-center justify-content-between">
@@ -76,68 +91,133 @@ height: 65px;
      </header>
 
 
+     <style>
+        .iti.iti--allow-dropdown.iti--separate-dial-code {
+    margin-top: 6px;
+}
+     </style>
+
     <div class="container">
         <br>
-    <div class="main-content">
+    <div class="main-content" style="margin-top: 0px;">
         <div class="logincontainer">
 
-
-           <div class="creativeform2">
+        
+     
+<br>
+<br>
+           <div class="creativeform1">
             <div class="create_investment_form">
-            
-                <div class="investment_form_title">
-                    <h3>Log In</h3>
-                    <p class="innerdog">
-                        Input the correct details below to login to your account.                </div>
-    <form action="" method="POST">
-        {% csrf_token %}
-                <div class="form_body">
-    
-                    <div class="form_body_row">
-                        <div class="form_body_column"> 
-                            <label for="email">Username</label>
-                            <input type="text" placeholder="Username" class="input" name="username" required>   
+                <div class="steppercontainer">
+                    <div class="stepper">
+                        <div class="numb">
+        1
                         </div>
-    
-                    </div>
-    
-                    <div class="form_body_row">
-                        <div class="form_body_column"> 
-                            <label for="password">Password</label>
-                            <input type="password" placeholder="Password" class="password" name="password" required>   
-                        </div>
-    
-                    </div>
-    
-                    <div class="fpas">
-                        <!-- {% url 'home' %} -->
-                      <a href="{% url 'password_reset'%}">Forgot Password ?</a>  
-    
-                    </div>
-    
-    
-    
-    
-                    <div class="form_body_row">
-       
-                        <div class="form_button_row" style="
-                        width: 100%;
-                    ">
-                            <input type="submit" value="Create Account">
+                        <div class="title">
+                            Create Investment
                         </div>
                     </div>
-    
-                    <div class="passworddog">
-                        
-                        
-                        Don't have an account? <span><a href="signup.html">Create Account</a> </span> 
+        
+ 
+        
+                    <div class="stepper ends">
+                        <div class="numb">
+        2
+                        </div>
+                        <div class="title">
+                            Investment Overview
+                        </div>
                     </div>
-    
-    
-    
-    
                 </div>
-    </form>
+                <div class="investment_form_title">
+                  <P style="padding-block: 10px;">
+                    Dollar Investment ({{j.inestment_name}})
+                  </P> 
+
+                </div>
+                <form method="POST" action="#">
+                    {% csrf_token %}
+
+<div class="form_body formcontro">
+
+
+
+
+
+
+   <div class="form_body_row">
+       <div class="form_body_column">
+           <label for="lname">Create Investment Account</label>
+           <input type="number" id="pamount" name="principal" placeholder="Principal Amount" required value="{{k.principal}}">
+       </div>
+
+       <div class="form_body_column">
+           <label for="lname">Effective Date</label>
+           <input type="date" id="edate" name="effective_date"  required value="{{todaysdate}}">
+       </div>
+
+   </div>
+   <div class="form_body_row">
+       <div class="form_body_column">
+           <label for="lname">Tenor</label>
+           <input type="number" id="tenur" name="tenor" placeholder="Enter a tenor" required value="{{k.tenor}}" min="30">
+           <small id="datecount"> </small>
+       </div>
+       <div class="form_body_column">
+           <label for="lname">Interest Rate</label>
+           <input type="number" id="interest" name="interest_rate" placeholder="Interest Rate"  required value="{{k.plan.investent_rate}}" readonly>                            </div>
+
+   </div>
+
+   <div class="form_body_row">
+       <div class="form_body_column">
+           <label for="lname">Maturity Date</label>
+           <input type="date" id="mdate" name="maturity_date" asp-format="{0:yyyy-MM-dd}"  required  readonly value="">
+       </div>
+       <div class="form_body_column">
+           <label for="lname">Interest Amount</label>
+           <input type="number" id="iamt" name="interest_amount" placeholder="Interest Rate" required readonly value="">                            </div>
+   </div>
+
+   <div class="form_body_row">
+       <div class="form_body_column">
+           <label for="lname">Total Amount Payable at Maturity</label>
+           <input type="number" id="mdamt" name="total_amount_payable"  required readonly value="k.total_amount_payable">
+       </div>
+
+       <div class="form_body_column">
+
+       </div>
+
+
+   </div>
+
+
+
+
+
+
+
+
+
+
+   <div class="form_body_row" >
+
+       <div class="form_button_row"
+   >
+           <input type="submit" value="Start Investment">
+       </div>
+   </div>
+
+
+
+
+
+
+
+</div>
+
+                   </form>
             </div>
            </div>
         </div>
@@ -164,6 +244,34 @@ height: 65px;
     } 
            
      </script>
-     <script src="nav.js"></script>
+
+<script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js'></script>
+
+
+<script>
+    // -----Country Code Selection
+$("#mobile_code").intlTelInput({
+	initialCountry: "ng",
+	separateDialCode: true,
+	// utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+});
+</script>
+<script src="progressbar.js"></script>
+<script>
+    function simpleInterestasas() {
+    const collection = document.getElementsByClassName("iti__selected-dial-code");
+   
+    man = collection[0].innerHTML.substr(1)
+    document.getElementById("phonenums").value = man + document.getElementById("mobile_code").value
+    } 
+</script>
+
+<script src="nav.js"></script>
+<script src="investmentcalc.js"></script>
+
+
 </body>
 </html>
